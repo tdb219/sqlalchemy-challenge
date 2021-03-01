@@ -128,16 +128,6 @@ def tobs():
 
 # Start and Start/End pages
 ## Bring in the corresponding query form climate.ipynb
-# @app.route("/api/v1.0/start")
-# @app.route("/api/v1.0/start/end")
-# def temps_start_end(start, end):
-#     session = Session(engine)
-
-#     temp_results = [func.max(Measurement.tobs), func.min(Measurement.tobs), func.avg(Measurement.tobs)]
-
-
-
-#     session.close()
 
 @app.route('/api/v1.0/<start>', defaults={'end': None})
 @app.route("/api/v1.0/<start>/<end>")
